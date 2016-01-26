@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Player {
 	
-	public int number;
+	private int number;
 	ArrayList<Tile> myTiles = new ArrayList<Tile>();
 	
 	
