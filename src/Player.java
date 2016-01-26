@@ -13,4 +13,7 @@ public class Player {
 	public void addTile(Tile input ){
 		myTiles.add(input);
 	}
+	public ArrayList<Tile> getTiles(){
+		return myTiles;
+	}
 }
