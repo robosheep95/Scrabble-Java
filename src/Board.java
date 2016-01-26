@@ -5,6 +5,7 @@ public class Board {
 	Bag objBag = new Bag();
 	public Board(){
 		objBag.Shuffle();
+		setSpace(112, objBag.Draw().getLetter());
 	}
 	
 	private char[][] objBoard = new char[15][15];
@@ -13,6 +14,7 @@ public class Board {
 		System.out.println(tileList);
 		System.out.print("Choose a Letter or \"-\" to Cancel:  ");
 		char input = oScan.nextLine().charAt(0);
+		input = Character.toUpperCase(input);
 		if (input == '-'){
 			return false;
 		}
@@ -20,6 +22,7 @@ public class Board {
 			if (input == tileList.get(i).getLetter()){
 				System.out.print("Select position on board:  ");
 				int inputPos = oScan.nextInt();
+				System.out.println(input);
 				if(setSpace(inputPos, input)){
 					System.out.println("Letter Placed");
 					tileList.remove(i);
@@ -57,7 +60,7 @@ public class Board {
 				output=output+" | " + String.format("%03d", i);
 			}
 			else{
-				output =output +" |  " + objBoard[i/16][i%15]+" ";
+				output =output +" |  " + objBoard[i/15][i%15]+" ";
 			}
 			if (i%15==14 && i/15<14){
 				output = output + " |\n"

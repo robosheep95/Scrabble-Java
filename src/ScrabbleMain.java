@@ -19,16 +19,20 @@ public class ScrabbleMain {
 		}
 		
 		boolean notDone = true;
+		
 		while(notDone){
 			for(int i=0; i < numOfPlayers; i++){
-				System.out.println("Player " + (i+1) + " tiles:\n" + listPlayers.get(i).getTiles()
-						+ "\n\nBoard:\n" + objBoard.toString() + "\n\n");
-				while(objBoard.setLetter(listPlayers)
-						objBoard.setLetter(listPlayers.get(i));
-				
-				
+				System.out.println("Player " + (i+1)
+						+ ":\n\nBoard:\n" + objBoard.toString() + "\n\n");
+				while(objBoard.setLetter(listPlayers.get(i).getTiles()));
+				objBoard.getTiles(listPlayers.get(i));
+			
 			}
-			notDone = false;
+			System.out.println("Are you done playing? ");
+			if(scan.next().toLowerCase() == "yes"){
+				notDone = false;
+				System.out.println(objBoard);
+			}
 		}
 		
 		
