@@ -2,13 +2,13 @@ import java.util.ArrayList;
 
 public class Player {
 	
-	public String name = "";
+	public int number;
 	ArrayList<Tile> myTiles = new ArrayList<Tile>();
 	
 	
-	public Player(String name){
+	public Player(int number){
 		
-		this.name = name;
+		this.number = number;
 	}
 	public void addTile(Tile input ){
 		myTiles.add(input);

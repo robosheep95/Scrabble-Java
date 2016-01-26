@@ -1,18 +1,30 @@
-
+import java.util.Scanner;
+import java.util.ArrayList;
 public class ScrabbleMain {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Board objBoard = new Board();
-		for (int i=0;i<225;i++){
-			System.out.print(i+"  ");
-			System.out.print(i/15+" ");
-			System.out.println(i%15+"  ");
+		Scanner scan = new Scanner(System.in);
 		
+		ArrayList<Player> listPlayers = new ArrayList<Player>();
+		
+		System.out.println("Welcome to Scrabble!");
+		System.out.println("How many players will there be? ");
+		int numOfPlayers = scan.nextInt();
+		
+		for(int i=0; i < numOfPlayers; i++){
+			listPlayers.add(new Player(i));
+			objBoard.getTiles(listPlayers.get(i));
 		}
-		objBoard.setLetter(0,'k');
-		objBoard.setLetter(113, 'Z');
-		System.out.println(objBoard);
+		
+		boolean notDone = true;
+		while(notDone){
+			
+		}
+		
+		
 		
 	}
 }
