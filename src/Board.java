@@ -1,4 +1,3 @@
-
 public class Board {
 	private char[][] objBoard = new char[15][15];
 	public boolean setLetter(int space,char input){

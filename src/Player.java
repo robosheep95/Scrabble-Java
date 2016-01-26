@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Player {
 	
@@ -12,3 +13,4 @@ public class Player {
 	public void addTile(Tile input ){
 		myTiles.add(input);
 	}
+}
