@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.util.ArrayList;
 public class ScrabbleMain {
 
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Board objBoard = new Board();
@@ -14,14 +13,20 @@ public class ScrabbleMain {
 		System.out.println("How many players will there be? ");
 		int numOfPlayers = scan.nextInt();
 		
-		for(int i=0; i < numOfPlayers; i++){
+		for(int i=1; i < numOfPlayers; i++){
 			listPlayers.add(new Player(i));
 			objBoard.getTiles(listPlayers.get(i));
 		}
 		
 		boolean notDone = true;
 		while(notDone){
-			
+			for(int i=1; i < numOfPlayers; i++){
+				System.out.println("Player " + i + " tiles:\n" + listPlayers.get(i).getTiles()
+						+ "\n\nBoard:\n" + objBoard.toString());
+				
+				
+			}
+			notDone = false;
 		}
 		
 		

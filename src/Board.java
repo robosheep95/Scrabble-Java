@@ -1,5 +1,6 @@
 public class Board {
 	Bag objBag = new Bag(); 
+	
 	private char[][] objBoard = new char[15][15];
 	public boolean setLetter(int space,char input){
 		int x = space/15;
