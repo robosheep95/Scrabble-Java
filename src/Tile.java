@@ -1,10 +1,14 @@
-
+/*
+ * Tim Brunner
+ * 1/17/2016
+ * Tile Class
+ */
 public class Tile {
 
 	private char letter;
 	private int value;
 	
-	public Tile(char letter, int value) {
+	public Tile(char letter, int value) {//Constructor that takes a letter and a value for the tile
 		this.letter = letter;
 		this.value = value;
 	}

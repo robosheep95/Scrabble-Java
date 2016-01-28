@@ -1,3 +1,8 @@
+/*
+ * Tim Brunner
+ * 1/28/2016
+ * Bag Class (Does not include blank tiles)
+ */
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,13 +13,13 @@ public class Bag {
 	private char [] letters = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
 	private ArrayList<Tile> objBag = new ArrayList<Tile>();
 	
-	public Bag()
+	public Bag()//Creates the tiles based on above information.
 	{
-		for(int j = 0; j < 26; j++)
+		for(int j = 0; j < 26; j++)//Cycles through all 26 letters
 		{
 			for(int h = 0; h < numberOfLetters[j]; h++)
 			{
-				objBag.add(new Tile(letters[j],letterValue[j]));		
+				objBag.add(new Tile(letters[j],letterValue[j]));//References above tables for char and value	
 			}
 		}	
 	}
@@ -26,7 +31,7 @@ public class Bag {
 		return output;
 	}
 	
-	public void Shuffle()
+	public void Shuffle()//Shuffles bag by selecting random tiles and putting them in the back of the pile. (1000 times)
 	{
 		
 		Random oRand = new Random();
@@ -39,7 +44,7 @@ public class Bag {
 			objBag.add(output);
 		}
 	}
-	public int Size(){
+	public int Size(){//Returns the size of the bag
 		return objBag.size();
 	}
 }

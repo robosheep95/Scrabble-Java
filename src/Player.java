@@ -1,3 +1,8 @@
+/*
+ * Sylvia Finger
+ * 1/17/2016
+ * Player Class that holds player number and "Rack"
+ */
 import java.util.ArrayList;
 
 public class Player {
@@ -8,6 +13,12 @@ public class Player {
 	
 	public Player(int number){
 		
+		this.setNumber(number);
+	}
+	public int getNumber() {
+		return number;
+	}
+	public void setNumber(int number) {
 		this.number = number;
 	}
 	public void addTile(Tile input ){
