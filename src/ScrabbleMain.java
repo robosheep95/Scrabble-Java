@@ -28,9 +28,9 @@ public class ScrabbleMain {
 		
 		while(notDone){
 			for(int i=0; i < numOfPlayers; i++){
-				System.out.println("Player " + (i+1)
+				System.out.println("Player " + (i+1) + "  Score = " + listPlayers.get(i).getScore()
 						+ ":\n\nBoard:\n" + objBoard.toString() + "\n\n");
-				while(objBoard.setLetter(listPlayers.get(i).getTiles()));
+				while(objBoard.setLetter(listPlayers.get(i).getTiles(), listPlayers.get(i)));
 				objBoard.getTiles(listPlayers.get(i));
 			
 			}

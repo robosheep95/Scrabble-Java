@@ -15,7 +15,7 @@ public class Board {
 	
 	private char[][] objBoard = new char[15][15];
 	
-	public boolean setLetter(ArrayList<Tile> tileList){ //Validates that player has the letter they are wanting to place then asks for where they want to place it
+	public boolean setLetter(ArrayList<Tile> tileList, Player player){ //Validates that player has the letter they are wanting to place then asks for where they want to place it
 		Scanner oScan = new Scanner(System.in);			//Returns false when the player is done placing letters
 		System.out.println(tileList);
 		System.out.println("Choose a Letter or \"-\" to Cancel:  ");
@@ -31,6 +31,7 @@ public class Board {
 				System.out.println(input);
 				if(setSpace(inputPos, input)){
 					System.out.println("Letter Placed");
+					player.setScore(player.getScore() + tileList.get(i).getValue());
 					tileList.remove(i);
 					return true;
 				}
